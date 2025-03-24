@@ -42,6 +42,8 @@ public class GettingStartedApplication {
 
     @GetMapping("/database")
     String database(Map<String, Object> model) {
+        System.out.println("Print statement inside the GettingStartedApplication.database() method. Brodie Abrew");
+
         try (Connection connection = dataSource.getConnection()) {
             final var statement = connection.createStatement();
             statement.executeUpdate(
